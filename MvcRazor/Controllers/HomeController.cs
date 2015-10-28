@@ -24,5 +24,20 @@ namespace MvcRazor.Controllers
             //return View("Index", (object)String.Format("Product Name: {0}", productName));
             return View(myProduct);
         }
+
+        public ActionResult NameAndPrice()
+        {
+            return View(myProduct);
+        }
+
+        public ActionResult DemoExpression()
+        {
+            ViewBag.ProductCount = 1;
+            ViewBag.ExpressShip = true;
+            ViewBag.ApplyDiscount = false;
+            ViewBag.Supplier = null;
+
+            return View(myProduct);
+        }
     }
 }
